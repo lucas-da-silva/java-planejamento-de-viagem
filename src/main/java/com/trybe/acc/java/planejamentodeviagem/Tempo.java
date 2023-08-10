@@ -23,17 +23,12 @@ public class Tempo {
     this.duracao = duracao;
   }
 
-  public static void main(String[] args) {
-    Tempo tempo = new Tempo("01/01/2021 00:00:00", "America/Sao_Paulo", "America/New_York", 10);
-    tempo.retonarDesembarqueHorarioLocalDestino();
-  }
-
   /**
    * retonarDesembarqueHorarioLocalDestino.
-   * <p>
-   * Transforma todos os fusos horarios disponíveis na classe ZoneId em um array de Strings, onde
-   * nos percorremos em busca do identificador do fuso horario do nosso destino, uma vez com esse
-   * fuso horario, podemos recuperar o horario local de desembarque no nosso destino
+   *
+   * <p> Transforma todos os fusos horarios disponíveis na classe ZoneId em um array de Strings,
+   * onde nos percorremos em busca do identificador do fuso horario do nosso destino, uma vez com
+   * esse fuso horario, podemos recuperar o horario local de desembarque no nosso destino</p>
    */
   public String retonarDesembarqueHorarioLocalDestino() {
 
@@ -43,7 +38,7 @@ public class Tempo {
     int indiceFusoHorarioOrigem = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-      if (fusosHorarios[i].equals(this.origem)) {
+      if (fusosHorarios[i].contains(this.origem)) {
         indiceFusoHorarioOrigem = i;
         break;
       }
@@ -57,7 +52,7 @@ public class Tempo {
     int indiceFusoHorarioDestino = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-      if (fusosHorarios[i].equals(this.destino)) {
+      if (fusosHorarios[i].contains(this.destino)) {
         indiceFusoHorarioDestino = i;
         break;
       }
@@ -80,7 +75,7 @@ public class Tempo {
     int indiceFusoHorarioOrigem = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-      if (fusosHorarios[i].equals(this.origem)) {
+      if (fusosHorarios[i].contains(this.origem)) {
         indiceFusoHorarioOrigem = i;
         break;
       }
