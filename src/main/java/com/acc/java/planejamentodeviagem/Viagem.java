@@ -1,4 +1,4 @@
-package com.trybe.acc.java.planejamentodeviagem;
+package com.acc.java.planejamentodeviagem;
 
 public class Viagem {
 

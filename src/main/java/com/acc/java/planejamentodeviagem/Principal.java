@@ -1,4 +1,4 @@
-package com.trybe.acc.java.planejamentodeviagem;
+package com.acc.java.planejamentodeviagem;
 
 import java.util.Scanner;
 
@@ -6,7 +6,6 @@ public class Principal {
 
   /**
    * Método principal com o menu do sistema.
-   * 
    */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
